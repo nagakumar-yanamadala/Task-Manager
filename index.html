@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel = "stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="todolist">
+        <h1 class="title">Task Manager</h1>
+        <p class="subtitle">Stay organized and productive every day</p>
+        <div class="content">
+            <form id="addTodoForm" class="addtodo">
+                <input type="text" name="newTodo" class="ToDoInput" placeholder="Enter your task here" />
+                <button type="submit" class="savebutton">Add</button>
+            </form>
+            <ul id="todoList"></ul>
+        </div>
+    </div>
+    <script src = "app.js"></script>
+</body>
+
+</html>
