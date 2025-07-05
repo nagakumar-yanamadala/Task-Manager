@@ -65,7 +65,7 @@ http://localhost:3000
 
 ## ✨ Screenshots
 
-![Task Manager Screenshot](./screenshot.png)
+![Task Manager Screenshot](./assets/screenshot.png)
 
 ## 📌 Future Improvements
 
