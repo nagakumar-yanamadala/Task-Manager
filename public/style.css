@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* LIGHT THEME */
+:root {
+  --bg: #e0f2f7;
+  /* Light Cyan */
+  --card: #ffffff;
+  /* White */
+  --accent: #00796b;
+  /* Teal */
+  --accent-hover: #004d40;
+  /* Dark Teal */
+  --text: #263238;
+  /* Dark Grey Blue */
+  --subtext: #546e7a;
+  /* Muted Grey Blue */
+  --soft-bg: #e6f7ff;
+  /* Lighter Cyan */
+  --soft-hover: #cce9f5;
+  /* Light Blue */
+  --input-bg: #f5fafd;
+  /* Very Light Blue */
+  --border: #b0bec5;
+  /* Light Grey Blue */
+  --delete: #d32f2f;
+  /* Red */
+  --delete-hover: #b71c1c;
+  /* Darker Red */
+  --shadow: rgba(0, 0, 0, 0.1);
+  /* Subtle Shadow */
+
+  --link: var(--accent);
+  --link-hover: var(--accent-hover);
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+  --bg: #212121;
+  /* Dark Grey */
+  --card: #303030;
+  /* Medium Dark Grey */
+  --accent: #80cbc4;
+  /* Light Teal */
+  --accent-hover: #4db6ac;
+  /* Medium Teal */
+  --text: #e0e0e0;
+  /* Off-White */
+  --subtext: #bdbdbd;
+  /* Light Grey */
+  --soft-bg: #424242;
+  /* Slightly Lighter Dark Grey */
+  --soft-hover: #616161;
+  /* Even Lighter Dark Grey */
+  --input-bg: #212121;
+  /* Dark Grey */
+  --border: #616161;
+  /* Medium Grey */
+  --delete: #ef9a9a;
+  /* Light Red */
+  --delete-hover: #e57373;
+  /* Medium Red */
+  --shadow: rgba(0, 0, 0, 0.6);
+  /* Pronounced Shadow */
+
+  --link: #80cbc4;
+  /* Light Teal */
+  --link-hover: #b2dfdb;
+  /* Very Light Teal */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container,
+.form-container,
+.details {
+  margin: 5em;
+  background: var(--card);
+  color: var(--text);
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px var(--shadow);
+  width: 90%;
+  overflow-y: auto;
+}
+
+/* Typography */
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 0.8em;
+  margin: 0.5em 0;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--input-bg);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.25);
+  /* Adjusted shadow for new accent */
+}
+
+textarea {
+  font-family: "Quicksand", sans-serif;
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Buttons */
+button {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.65em 1.5em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1em;
+  cursor: pointer;
+  align-self: center;
+  transition: 0.3s ease all;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.25);
+  /* Adjusted shadow for new accent */
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button i {
+  margin-right: 0.3em;
+}
+
+/* Delete Button */
+#delete {
+  font-size: medium;
+  background: none;
+  color: var(--delete);
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#delete:hover {
+  color: var(--delete-hover);
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: var(--soft-bg);
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: var(--soft-hover);
+}
+
+li p {
+  color: var(--subtext);
+  word-break: break-word;
+  margin-top: 0.4em;
+}
+
+/* Links */
+a,
+.actions a {
+  text-decoration: none;
+  color: var(--link);
+  padding: 0.4em 1em;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+.actions a:hover {
+  color: var(--link-hover);
+}
+
+/* Details Section */
+.details p {
+  margin: 1em 0;
+  color: var(--subtext);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+
+  .container,
+  .form-container,
+  .details {
+    margin: 0;
+    width: 100%;
+    padding: 1em;
+  }
+
+  textarea,
+  input {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "tasks": [
+    {
+      "id": "7g8h9i",
+      "title": "Write Blog Post",
+      "description": "Write and publish a blog about learning EJS with Express."
+    },
+    {
+      "id": "1a2b3c",
+      "title": "Study Node.js",
+      "description": "Go through Express routing and middleware."
+    }
+  ],
+  "completedTasks": []
+}

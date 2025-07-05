@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Task Details</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <button id="themeToggle" title="Toggle Theme" style="
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    color: var(--text);
+  ">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+
+  <div class="details">
+    <h2>
+      <%= task.title %>
+    </h2>
+    <p>
+      <b>Description : </b>
+      <%= task.description %>
+    </p>
+      <div style="display: flex">
+        <a href="/tasks/<%= task.id %>/edit" class="edit"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+        <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST">
+          <button id="delete"><i class="fa-solid fa-trash"></i>Delete</button>
+          </form>
+      </div>
+    <br>
+    <a href="/">← Back to Home</a>
+  </div>
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const icon = toggleBtn.querySelector('i');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+
+    document.body.setAttribute('data-theme', currentTheme);
+    icon.className = currentTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+
+    toggleBtn.onclick = () => {
+      const isDark = document.body.getAttribute('data-theme') === 'dark';
+      const newTheme = isDark ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      icon.className = newTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    };
+  </script>
+  
+</body>
+
+</html>

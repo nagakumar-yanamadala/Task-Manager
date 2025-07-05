@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <button id="themeToggle" title="Toggle Theme" style="
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    color: var(--text);
+  ">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <div class="container">
+    <h1>Task Manager</h1>
+    <form action="/" method="POST" onsubmit="return validateForm()">
+      <label style="margin: 10px;" for="title"><b >Task Title</b></label>
+      <input type="text" name="title" id="title" placeholder="Task Title" />
+      <br>
+      <label for="description" style="margin: 10px;" ><b >Describe the Task</b></label>
+      <textarea name="description" id="description" rows="3" placeholder="Task Description"
+      ></textarea>
+      <button type="submit" style="margin: 2em;">Add Task</button>
+    </form>
+    <a href="/completed">Completed Tasks</a>
+    <h3 style ="text-align: center;">Tasks to complete</h3>
+    <ul>
+      <% for(let task of tasks){ %>
+        <li>
+          <b>
+            <%= task.title %>
+          </b>
+          <p>
+            <%= task.description %>
+          </p>
+          <div class="actions" style="display: flex; justify-content: space-between;">
+            <a href="/tasks/<%= task.id %>" style = 'padding-left: 0;'>Details</a>
+            <form action="/tasks/<%= task.id %>?_method=POST" method = 'post' >
+              <button style="margin: 0; font-size: small;"><i class="fa-solid fa-circle-check" ></i>Mark completed</button>
+            </form>
+          </div>
+        </li>
+        <% } %>
+    </ul>
+  </div>
+
+  <script>
+    function validateForm() {
+      const title = document.getElementById('title').value.trim();
+      const description = document.getElementById('description').value.trim();
+      if (!title || !description) {
+        alert('Please fill in both fields.');
+        return false;
+      }
+      return true;
+    }
+
+    const toggleBtn = document.getElementById('themeToggle');
+    const icon = toggleBtn.querySelector('i');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+
+    document.body.setAttribute('data-theme', currentTheme);
+    icon.className = currentTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+
+  toggleBtn.onclick = () => {
+    const isDark = document.body.getAttribute('data-theme') === 'dark';
+    const newTheme = isDark ? 'light' : 'dark';
+    document.body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    icon.className = newTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+  };
+
+  </script>
+</body>
+
+</html>
