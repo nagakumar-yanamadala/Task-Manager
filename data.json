@@ -1,19 +1,15 @@
 {
   "tasks": [
     {
-      "id": "5p6q7r",
-      "title": "Redesign the Homepage",
-      "description": "Improve the homepage layout using modern CSS (like Flexbox or Grid) to make it more responsive and visually appealing."
+      "id": "1a2b3c",
+      "title": "Debug an Express App",
+      "description": "Identify and fix any bugs in your current Express project so it runs smoothly."
     },
     {
-      "id": "8s9t0u",
-      "title": "Build a Contact Form",
-      "description": "Create a functional and user-friendly contact form with HTML, styled with CSS, and validate inputs using JavaScript."
-    },
-    {
-      "id": "3v4w5x",
-      "title": "Add Interactive Navbar",
-      "description": "Implement a navigation bar with a dropdown menu and smooth scrolling using JavaScript for a better user experience."
+      "id": "7g8h9i",
+      "title": "Build a Simple API",
+      "description": "Create a small REST API with Express to manage a list of tasks, including GET and POST endpoints."
     }
-  ]
+  ],
+  "completedTasks": []
 }
