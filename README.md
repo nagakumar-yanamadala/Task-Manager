@@ -1,43 +1,53 @@
-# Task Manager
+# 📝 Task Manager
 
-A simple, full-stack task management application built with Node.js, Express, and EJS. It allows you to create, edit, delete, and track tasks, with support for theme toggling and a smooth user interface.
+A simple yet powerful full-stack task management app built using **Node.js**, **Express**, and **EJS**. Whether you’re organizing your daily to-dos or keeping track of long-term projects, this app lets you create, edit, delete, and manage your tasks easily — all with a clean, responsive design and theme toggle!
 
-## 🚀 Features
+---
 
-- Add, edit, delete tasks
-- Mark tasks as completed and move them back if needed
-- Task details page
-- Persistent data storage in JSON
-- Clean, responsive design with dark/light theme toggle
-- Font Awesome icons for a polished look
+## 🚀 What You Can Do
 
-## 🛠 Tech Stack
+- ➕ Add new tasks
+- 📝 Edit existing tasks
+- ❌ Delete tasks you no longer need
+- ✅ Mark tasks as completed (and move them back if needed)
+- 🔍 View task details on a dedicated page
+- 💾 Your tasks are stored persistently in a `JSON` file — no database setup required
+- 🌗 Switch between dark and light mode with a single click
+- ✨ Sleek UI with **Font Awesome** icons
 
-- JavaScript (ES6+)
-- Node.js
-- Express.js
-- EJS templating
-- HTML / CSS
-- Font Awesome
-- JSON for data storage
+---
 
-## 📂 Project Structure
+## 🛠 Built With
+
+- **JavaScript (ES6+)**
+- **Node.js**
+- **Express.js**
+- **EJS** templating engine
+- **HTML / CSS**
+- **Font Awesome**
+- **JSON** for simple data storage
+
+---
+
+## 📁 Project Folder Structure
 
 ```
 Task-Manager/
-  ├── views/
-  │   ├── home.ejs
-  │   ├── completed.ejs
-  │   ├── details.ejs
-  │   └── edit.ejs
-  ├── public/
-  │   └── style.css
-  ├── data.json
-  ├── index.js
-  └── package.json
+├── views/            # EJS templates
+│   ├── home.ejs
+│   ├── completed.ejs
+│   ├── details.ejs
+│   └── edit.ejs
+├── public/           # Static CSS files
+│   └── style.css
+├── data.json         # Stores your tasks
+├── index.js          # Main server file
+└── package.json      # Project metadata and dependencies
 ```
 
-## 💻 Getting Started
+---
+
+## 💻 How to Run It Locally
 
 1. **Clone the repository**
 
@@ -45,35 +55,39 @@ Task-Manager/
 git clone https://github.com/nagakumar-yanamadala/Task-Manager.git
 ```
 
-2. **Install dependencies**
+2. **Install all required packages**
 
 ```bash
 npm install
 ```
 
-3. **Run the application**
+3. **Start the server**
 
 ```bash
 node index.js
 ```
 
-4. **Open in browser**
+4. **Open your browser**
 
-```
-http://localhost:3000
-```
+Visit: [http://localhost:3000](http://localhost:3000)
 
-## ✨ Screenshots
+---
+
+## ✨ Preview
 
 ![Task Manager Screenshot](./assets/screenshot.png)
 
-## 📌 Future Improvements
+---
 
-- Add authentication
-- Connect to MongoDB for scalable storage
-- Add drag-and-drop sorting of tasks
-- Improve accessibility
+## 🧠 What’s Coming Next
+
+- 🔐 User authentication
+- 🌐 Switch from JSON to MongoDB for better scalability
+- 🖱️ Drag-and-drop task sorting
+- ♿ Accessibility improvements for keyboard and screen readers
+
+---
 
 ## 📄 License
 
-This project is open-source and free to use under the MIT License.
+This project is licensed under the **MIT License** — feel free to use, modify, and share!
