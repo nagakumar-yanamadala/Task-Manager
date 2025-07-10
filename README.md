@@ -1,4 +1,4 @@
-# 📝 Task Manager
+#  Task Manager
 
 A simple yet powerful full-stack task management app built using **Node.js**, **Express**, and **EJS**. Whether you’re organizing your daily to-dos or keeping track of long-term projects, this app lets you create, edit, delete, and manage your tasks easily — all with a clean, responsive design and theme toggle!
 
