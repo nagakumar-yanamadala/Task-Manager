@@ -4,20 +4,20 @@ A simple yet powerful full-stack task management app built using **Node.js**, **
 
 ---
 
-## 🚀 What You Can Do
+##  What You Can Do
 
-- ➕ Add new tasks
-- 📝 Edit existing tasks
-- ❌ Delete tasks you no longer need
-- ✅ Mark tasks as completed (and move them back if needed)
-- 🔍 View task details on a dedicated page
-- 💾 Your tasks are stored persistently in a `JSON` file — no database setup required
-- 🌗 Switch between dark and light mode with a single click
-- ✨ Sleek UI with **Font Awesome** icons
+-  Add new tasks
+-  Edit existing tasks
+-  Delete tasks you no longer need
+-  Mark tasks as completed (and move them back if needed)
+-  View task details on a dedicated page
+-  Your tasks are stored persistently in a `JSON` file — no database setup required
+-  Switch between dark and light mode with a single click
+-  Sleek UI with **Font Awesome** icons
 
 ---
 
-## 🛠 Built With
+##  Built With
 
 - **JavaScript (ES6+)**
 - **Node.js**
@@ -29,7 +29,7 @@ A simple yet powerful full-stack task management app built using **Node.js**, **
 
 ---
 
-## 📁 Project Folder Structure
+##  Project Folder Structure
 
 ```
 Task-Manager/
@@ -47,7 +47,7 @@ Task-Manager/
 
 ---
 
-## 💻 How to Run It Locally
+##  How to Run It Locally
 
 1. **Clone the repository**
 
@@ -73,21 +73,21 @@ Visit: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## ✨ Preview
+##  Preview
 
 ![Task Manager Screenshot](./assets/screenshot.png)
 
 ---
 
-## 🧠 What’s Coming Next
+##  What’s Coming Next
 
-- 🔐 User authentication
-- 🌐 Switch from JSON to MongoDB for better scalability
-- 🖱️ Drag-and-drop task sorting
-- ♿ Accessibility improvements for keyboard and screen readers
+-  User authentication
+-  Switch from JSON to MongoDB for better scalability
+-  Drag-and-drop task sorting
+-  Accessibility improvements for keyboard and screen readers
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the **MIT License** — feel free to use, modify, and share!
